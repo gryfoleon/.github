@@ -1,0 +1,46 @@
+{
+  "name": "Protect main: require PR (no direct commits)",
+  "target": "branch",
+  "source_type": "Repository",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/main"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": false,
+        "required_reviewers": [],
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true,
+        "allowed_merge_methods": [
+          "merge",
+          "squash",
+          "rebase"
+        ]
+      }
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "copilot_code_review",
+      "parameters": {
+        "review_on_push": true,
+        "review_draft_pull_requests": true
+      }
+    }
+  ],
+  "bypass_actors": []
+}
