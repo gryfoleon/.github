@@ -1,4 +1,4 @@
-# Pull Request: [Title of the Proposed Change]
+# Pull Request: [Ticket Number / Ticket URL]
 
 ## 1. Project Contextualization
 
@@ -42,6 +42,7 @@ Identify the primary nature of the changes introduced (select all applicable cat
 - [ ] **Unit Testing:** Successful execution of isolated logic tests (new or updated).
 - [ ] **Integration Testing:** Empirical verification of inter-module communication and service interoperability.
 - [ ] **Regression Analysis:** Confirmation that current modifications have not adversely impacted legacy functionalities.
+- [ ] **N/A:** No testing required.
 
 ### 3.2 Empirical Verification & Edge Case Handling
 
